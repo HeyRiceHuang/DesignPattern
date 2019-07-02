@@ -1,10 +1,10 @@
 public abstract class Factory {
-    public final Product Create(String owner, String serialNo) {
-        Product product = CreateProduct(owner, serialNo);
+    public final Product Create(String owner) {
+        Product product = CreateProduct(owner);
         RegisterProduct(product);
         return product;
     }
-    public abstract Product CreateProduct(String owner, String serialNo);
+    public abstract Product CreateProduct(String owner);
     public abstract void RegisterProduct(Product product);
 
 }

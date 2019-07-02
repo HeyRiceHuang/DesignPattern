@@ -1,7 +1,8 @@
 public class IDCard extends Product {
-    private String owner, serialNo;
+    private String owner;
+    private int serialNo;
 
-    IDCard(String owner, String serialNo) {
+    IDCard(String owner, int serialNo) {
         this.owner = owner;
         this.serialNo = serialNo;
     }
@@ -15,7 +16,7 @@ public class IDCard extends Product {
         return this.owner;
     }
 
-    public String GetSerialNo() {
+    public int GetSerialNo() {
         return this.serialNo;
     }
 }
