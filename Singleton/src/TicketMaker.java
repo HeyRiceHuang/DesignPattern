@@ -3,7 +3,7 @@ public class TicketMaker {
     private static volatile TicketMaker tickerMaker;
     private int ticket = 1000;
 
-    public int GetNextTicketNumber() {
+    public synchronized int GetNextTicketNumber() {
         return ticket++;
     }
 
@@ -19,6 +19,6 @@ public class TicketMaker {
         return tickerMaker;
     }
 
-    private TicketMaker(){};
+    private TicketMaker(){}
 
 }
