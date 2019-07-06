@@ -14,9 +14,9 @@ public class Triple {
             synchronized (Triple.class) {
                 if (triples[id] == null) {
                     triples[id] = new Triple();
-                    return triples[id];
                 }
             }
         }
+        return triples[id];
     }
 }
